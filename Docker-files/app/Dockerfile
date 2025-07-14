@@ -4,7 +4,7 @@ LABEL "App"="Prod"
 LABEL "Service"="FED"
 
 RUN git clone https://github.com/hkhcoder/vprofile-project.git
-RUN cd vprofile-project && gti checkout containers && mvn install
+RUN cd vprofile-project && git checkout containers && mvn install
 
 FROM tomcat:10-jdk21
 RUN rm -rf /usr/local/tomcat/webapps/*
