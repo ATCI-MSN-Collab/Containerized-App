@@ -33,15 +33,15 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=vprodbpass
 
-  mmg:
+  vprocache01:
     image: memcached:latest
-    container_name: mmg
+    container_name: vprocache-01
     ports:
       - "11211:11211"
 
-  rmq:
+  vpromq01:
     image: rabbitmq:latest
-    container_name: rmq
+    container_name: vpromq-01
     ports:
       - "5672:5672"
     environment:
